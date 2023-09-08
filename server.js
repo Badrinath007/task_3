@@ -10,6 +10,10 @@
     res.sendFile(path.join(__dirname, "home.html"));
  })
 
- app.listen(3000, () => {
-    console.log('listening on port 3000');
+ app.get('/editor', (req, res) => {
+   res.sendfile(path.join(__dirname, "editor.html"));
+ })
+
+ app.listen(8080, () => {
+    console.log('listening on port 8080');
  })
